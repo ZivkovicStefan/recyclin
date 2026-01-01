@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 3840 2160"
+     width="3840" height="2160">
+
+  <!-- GEAR / ZUPČANIK -->
+  <g opacity="0.04" stroke="#ffffff" stroke-width="18" fill="none">
+    <path d="M400 1100
+             l40 -70 90 0 40 70
+             70 40 0 90 -70 40
+             -40 70 -90 0 -40 -70
+             -70 -40 0 -90 z"/>
+  </g>
+
+  <!-- METAL BLOCK -->
+  <g opacity="0.035" stroke="#ffffff" stroke-width="18" fill="none">
+    <path d="M2600 1200
+             l200 -80 260 80
+             -80 160
+             -300 0 z"/>
+  </g>
+
+  <!-- LEAF (STILIZOVANO, NE ILUSTRACIJA) -->
+  <g opacity="0.035" stroke="#ffffff" stroke-width="14" fill="none">
+    <path d="M2200 300
+             c-200 200 -240 400 -120 540
+             120 140 380 80 540 -80
+             160 -160 200 -380 -80 -460 z"/>
+  </g>
+
+  <!-- MONEY / BAR -->
+  <g opacity="0.03" stroke="#ffffff" stroke-width="16" fill="none">
+    <rect x="900" y="1600" width="420" height="140" rx="18"/>
+  </g>
+
+  <!-- RECYCLE (JAKO POJEDNOSTAVLJENO) -->
+  <g opacity="0.03" stroke="#ffffff" stroke-width="14" fill="none">
+    <path d="M3100 400
+             l120 200
+             -80 0
+             -60 -100
+             -60 100
+             -80 0 z"/>
+  </g>
+
+</svg>

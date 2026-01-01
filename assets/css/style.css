@@ -1,0 +1,360 @@
+/* =========================
+   RESET
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BASE
+   ========================= */
+body {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    background: radial-gradient(circle at top, #1f5f3a, #0b2f23);
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1, h2, h3 {
+    letter-spacing: -0.02em;
+}
+
+/* =========================
+   BACKGROUND OVERLAY
+   ========================= */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("../imgs/bg-green-texture.svg");
+    background-repeat: repeat;
+    background-size: 1400px auto;
+    background-position: top left;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+section{
+    padding: 0px 50px;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+.site-header {
+    background: linear-gradient(#2f8f4f, #256b3c);
+    padding: 30px;
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 2000;
+}
+
+
+
+.header-flex {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* =========================
+   NAV
+   ========================= */
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav a {
+    margin-left: 20px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a.active {
+    background: #fff;
+    color: #1f5f3a;
+}
+
+.main-nav a:hover:not(.btn-call):not(.active) {
+    background: rgba(255,255,255,0.15);
+}
+
+.btn-call {
+    background: #3bbf6b;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+/* =========================
+   HAMBURGER (HIDDEN DESKTOP)
+   ========================= */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px 0;
+    background: #fff;
+    border-radius: 2px;
+}
+
+/* =========================
+   HERO
+   ========================= */
+.hero {
+    max-width: 1200px;
+    margin: 120px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.hero h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* BUTTONS */
+.hero-buttons .btn {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.green { background: #3bbf6b; }
+.red { background: #d94c4c; }
+
+/* =========================
+   CARDS
+   ========================= */
+.cards {
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: linear-gradient(#f1f1f1, #dcdcdc);
+    color: #222;
+    padding: 20px;
+    border-radius: 14px;
+    font-weight: bold;
+    box-shadow: inset 0 0 0 2px #bbb, 0 8px 20px rgba(0,0,0,0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: inset 0 0 0 2px #bbb, 0 16px 35px rgba(0,0,0,0.45);
+}
+
+/* =========================
+   CONTACT
+   ========================= */
+.contact {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 16px;
+    border: 0;
+}
+
+/* =========================
+   FLOATING LOGO (DESKTOP – ORIGINAL, UNTOUCHED)
+   ========================= */
+/* FLOATING LOGO */
+.floating-logo {
+    position: absolute;
+    top: 0px;
+    left: 15vw;
+    pointer-events: none;
+    z-index: 2000;
+
+}
+
+.floating-logo img {
+    height: 200px;
+    max-width: 90%;
+    filter: drop-shadow(0 18px 35px rgba(0,0,0,0.55));
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+.site-footer {
+    background: linear-gradient(#0b2f23, #071e17);
+    margin-top: 80px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+/* =========================
+   MOBILE MENU OVERLAY
+   ========================= */
+.nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 1500;
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+    .site-header {
+        position: sticky;
+        top: 0;
+        height: 90px;
+
+    }
+    .floating-logo{
+        left: 10vw;
+        top: 30px;
+    }
+    .floating-logo img {
+        height: 120px;
+    }
+
+    .header-flex {
+        justify-content: space-between;
+    }
+
+    /* MOBILE NAV – INIT STATE */
+    .main-nav {
+        position: fixed;
+
+        top: 90px;
+        height: calc(100vh - 90px);
+
+        right: -100%;
+        width: 75%;
+        max-width: 300px;
+
+        background: linear-gradient(#2f8f4f, #256b3c);
+        box-shadow: -10px 0 25px rgba(0,0,0,0.35);
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        padding: 40px 25px;
+        transition: right 0.3s ease;
+
+        z-index: 4000;
+    
+    }
+
+    .main-nav.open {
+        right: 0;
+    }
+    header{
+        position: sticky;
+    }
+
+    .main-nav a {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .btn-call {
+        width: 100%;
+        text-align: center;
+    }
+    .header-flex{
+        justify-content: flex-end
+    }
+    .nav-toggle {
+        display: block;
+        z-index: 4500;
+    }
+    .hero {
+        grid-template-columns: 1fr;
+        margin: 60px auto;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
